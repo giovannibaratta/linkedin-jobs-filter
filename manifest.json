@@ -5,10 +5,18 @@
   "description": "Filter duplicated jobs in LinkedIn",
   "content_scripts": [
     {
-      "js": ["scripts/filter.js"],
+      "js": [
+        "scripts/filter.js"
+      ],
       "matches": [
         "https://www.linkedin.com/jobs/search/*"
       ]
     }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
   ]
 }
